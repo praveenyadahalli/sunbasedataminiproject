@@ -9,4 +9,12 @@ public class WebPageController {
     public String loginPage() {
         return "login";
     }
+    @GetMapping("/get-customers")
+    public String getAllCustomers() {
+        return "get-all-customer";
+    }
+    @GetMapping("/add-new-customer")
+    public String addNewCustomer() {
+        return "add-new-customer";
+    }
 }
