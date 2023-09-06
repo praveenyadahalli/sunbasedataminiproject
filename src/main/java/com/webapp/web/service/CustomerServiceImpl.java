@@ -8,15 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
 import java.util.List;
-
+@Service
 public class CustomerServiceImpl implements CustomerService {
+    private final RestTemplate restTemplate;
 
     @Autowired
-    public RestTemplate restTemplate;
+    public CustomerServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
     @Value("${external.api.baseurl}")
     private String externalApiBaseUrl;
 

@@ -6,7 +6,6 @@ import com.webapp.web.response.CustomerResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
 public interface CustomerService {
     public String authenticateUser(String loginId, String password);
     public List<CustomerResponse> getCustomerList(String accessToken);

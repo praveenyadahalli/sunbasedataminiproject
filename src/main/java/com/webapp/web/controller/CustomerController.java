@@ -5,6 +5,7 @@ import com.webapp.web.entity.UserIdPasswordEntity;
 import com.webapp.web.response.CustomerResponse;
 import com.webapp.web.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,16 +15,25 @@ import java.util.List;
 @Controller
 @RequestMapping("/api")
 public class CustomerController {
-
     private CustomerService customerService;
 
+    @Autowired
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
     @PostMapping("/auth")
-    public ResponseEntity<String> authenticateUser(@RequestBody UserIdPasswordEntity request) {
-        String accessToken = customerService.authenticateUser(request.getLogin_id(), request.getPassword());
-        if (accessToken != null) {
-            return ResponseEntity.ok("Authentication successful. Access Token: " + accessToken);
-        } else {
-            return ResponseEntity.badRequest().body("Authentication failed.");
+    public ResponseEntity<?> authenticateUser(@RequestParam("login_id") String loginId,
+                                              @RequestParam("password") String password) {
+        try {
+            String accessToken = customerService.authenticateUser(loginId, password);
+            if (accessToken != null) {
+                return ResponseEntity.ok("Authentication successful. Access Token: " + accessToken);
+            } else {
+                return ResponseEntity.badRequest().body("Authentication failed.");
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed: " + e.getMessage());
         }
     }
     @GetMapping("/get-customer")
