@@ -6,54 +6,161 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h1 class="text-center">Customer List</h1>
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Street</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Replace the following rows with data from your backend -->
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>Main St</td>
-            <td>123 Main St</td>
-            <td>New York</td>
-            <td>New York</td>
-            <td>john@example.com</td>
-            <td>1234567890</td>
-            <td>
-                <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                <a href="#" class="btn btn-sm btn-danger">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td>Jane</td>
-            <td>Smith</td>
-            <td>Elm St</td>
-            <td>456 Elm St</td>
-            <td>Los Angeles</td>
-            <td>California</td>
-            <td>jane@example.com</td>
-            <td>9876543210</td>
-            <td>
-                <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                <a href="#" class="btn btn-sm btn-danger">Delete</a>
-            </td>
-        </tr>
-        <!-- Add more rows as needed -->
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- Title centered above the button row -->
+            <h1>Customer List</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-left">
+            <!-- Add New Customer button centered in its own row -->
+            <button id="addCustomerButton" class="btn btn-success">Add New Customer</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Street</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Main St</td>
+                    <td>123 Main St</td>
+                    <td>New York</td>
+                    <td>New York</td>
+                    <td>john@example.com</td>
+                    <td>1234567890</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Elm St</td>
+                    <td>456 Elm St</td>
+                    <td>Los Angeles</td>
+                    <td>California</td>
+                    <td>jane@example.com</td>
+                    <td>9876543210</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Main St</td>
+                    <td>123 Main St</td>
+                    <td>New York</td>
+                    <td>New York</td>
+                    <td>john@example.com</td>
+                    <td>1234567890</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Elm St</td>
+                    <td>456 Elm St</td>
+                    <td>Los Angeles</td>
+                    <td>California</td>
+                    <td>jane@example.com</td>
+                    <td>9876543210</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Main St</td>
+                    <td>123 Main St</td>
+                    <td>New York</td>
+                    <td>New York</td>
+                    <td>john@example.com</td>
+                    <td>1234567890</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Elm St</td>
+                    <td>456 Elm St</td>
+                    <td>Los Angeles</td>
+                    <td>California</td>
+                    <td>jane@example.com</td>
+                    <td>9876543210</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Main St</td>
+                    <td>123 Main St</td>
+                    <td>New York</td>
+                    <td>New York</td>
+                    <td>john@example.com</td>
+                    <td>1234567890</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Elm St</td>
+                    <td>456 Elm St</td>
+                    <td>Los Angeles</td>
+                    <td>California</td>
+                    <td>jane@example.com</td>
+                    <td>9876543210</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+<script>
+    // JavaScript to handle button click event
+    document.getElementById("addCustomerButton").addEventListener("click", function () {
+        // Redirect to the new page
+        window.location.href = "http://localhost:8080/add-new-customer";
+    });
+</script>
+
 </body>
 </html>
